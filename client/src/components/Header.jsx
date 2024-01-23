@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <Navbar className='border-b-2'>
       <Link to='/' className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
-        <span className='px-2 py-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 rounded-lg text-white'>Abinav's</span>
+        <span className='px-2 py-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 rounded-lg text-white'>Abinav&apos;s</span>
         Blog
       </Link>
       <form>
@@ -27,7 +27,7 @@ export default function Header() {
         </Button>
         <Link>
         <Button gradientDuoTone='purpleToBlue' outline>
-          Sign IN
+          Sign In
         </Button>
         </Link>
         <Navbar.Toggle />
