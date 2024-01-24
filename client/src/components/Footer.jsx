@@ -30,7 +30,7 @@ export default function FooterCom() {
                 </Footer.Link>
                 <Footer.Link
                   href='/about'
-                  target='_blank'
+                  target='_blank' 
                   rel='noopener noreferrer'
                 >
                   Abinav&apos;s Blog
