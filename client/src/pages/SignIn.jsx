@@ -1,6 +1,8 @@
 import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react"
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import {useDispatch} from 'react-redux';
+import { signInStart,signInSuccess,signInFailure } from "../../redux/user/userSlice"
 
 export default function SignIn() {
   
@@ -10,6 +12,7 @@ export default function SignIn() {
     setformData({...formData,[e.target.id]:e.target.value.trim()})
   }
   const [loading,setLoading] = useState(false)
+  const dispatch=useDispatch();
   const [ errorMessage,seterrorMessage] = useState(null)
   const handleSubmit = async(e)=>{
     e.preventDefault();
