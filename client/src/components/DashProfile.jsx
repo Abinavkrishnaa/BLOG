@@ -16,7 +16,7 @@ export default function DashProfile() {
         </div>
         <TextInput
           type='text'
-          id='username'
+          id='username' 
           placeholder='username'
           defaultValue={currentUser.username}
         />
