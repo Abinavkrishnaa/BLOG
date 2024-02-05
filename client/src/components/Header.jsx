@@ -34,7 +34,7 @@ export default function Header() {
       </Button>
       <div className='flex gap-2 md:order-2'>
         <Button
-          className='w-12 h-10 hidden sm:inline'
+          className='w-12 h-15 hidden sm:inline'
           color='gray'
           pill
           onClick={() => dispatch(toggleTheme())}
@@ -46,7 +46,7 @@ export default function Header() {
             arrowIcon={false}
             inline
             label={
-              <Avatar alt='user' img={currentUser.profilePicture} rounded />
+              <Avatar alt='user' img={currentUser.profilePicture} rounded className='m-2 h-8 w-8' />
             }
           >
             <Dropdown.Header>
