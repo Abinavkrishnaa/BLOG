@@ -30,6 +30,7 @@ export default function DashProfile() {
     const uploadTask  = uploadBytesResumable(storageRef,image)
     uploadTask.on("state_changed",(snapshot)=> {
       const progress = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+      setImageFileUpload(progress.toFixed(0))
     })
   }
   console.log(image,imageFile);
