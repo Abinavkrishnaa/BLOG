@@ -50,9 +50,7 @@ export default function Header() {
               img={currentUser.profilePicture}
               className='m-2 '
               rounded
-             
-              
-            />
+               />
             }
           >
             <Dropdown.Header>
