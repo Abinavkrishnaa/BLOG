@@ -97,12 +97,14 @@ export default function DashProfile() {
       dispatch(updateStart());
       const res = await fetch(`/api/user/update/${currentUser._id}`, {
         method: 'PUT',
+        credentials:"same-origin",
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
       const data = await res.json();
+      console.log(res);
       if (!res.ok) {
         dispatch(updateFailure(data.message));
         setUpdateUserError(data.message);
