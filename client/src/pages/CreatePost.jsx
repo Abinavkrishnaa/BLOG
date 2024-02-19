@@ -82,6 +82,19 @@ export default function CreatePost() {
       setPublishError('Something went wrong');
     }
   };
+  const modules = {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+      [
+        { list: 'ordered' },
+        { list: 'bullet' },
+        { indent: '-1' },
+        { indent: '+1' },
+      ],
+      ['link', 'image'],
+      ['clean'],
+    ]}
   return (
     <div className='p-3 max-w-3xl mx-auto min-h-screen'>
       <h1 className='text-center text-3xl my-7 font-semibold'>Create a post</h1>
@@ -144,12 +157,14 @@ export default function CreatePost() {
         }
         <ReactQuill
           theme='snow'
+          
           placeholder='Write something...'
           className='h-72 mb-12'
           required
           onChange={(value) => {
             setFormData({ ...formData, content: value });
           }}
+          modules={modules}
         />
         <Button type='submit' gradientDuoTone='purpleToPink'>
           Publish
