@@ -1,10 +1,11 @@
-import { Alert, Button, TextInput, Textarea } from 'flowbite-react';
+import { Alert, Button, Textarea } from 'flowbite-react';
 
 import { useState,useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Comment from './Comment';
 
+// eslint-disable-next-line react/prop-types
 export default function CommentSection({ postId }) {
   const { currentUser } = useSelector((state) => state.user);
   const [comment, setComment] = useState('');
