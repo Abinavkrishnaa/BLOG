@@ -3,11 +3,13 @@ import moment from 'moment';
 import { useEffect, useState } from 'react';
 import { FaThumbsUp } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
-
-export default function Comment({ comment, onLike }) {
+import { Button, Textarea } from 'flowbite-react';
+import { set } from 'mongoose';
+export default function Comment({ comment, onLike, onEdit }) {
   const [user, setUser] = useState({});
   console.log(user);
-  
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedContent, setEditedContent] = useState(comment.content);
   const { currentUser } = useSelector((state) => state.user);
   useEffect(() => {
     const getUser = async () => {
@@ -24,6 +26,31 @@ export default function Comment({ comment, onLike }) {
     };
     getUser();
   }, [comment]);
+  const handleEdit = () => {
+    setIsEditing(true);
+    setEditedContent(comment.content);
+  };
+
+  const handleSave = async () => {
+    try {
+      const res  = await fetch(`/api/comment/editComment/${comment._id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          content: editedContent
+        })
+      });
+      if (res.ok) {
+        setIsEditing(false);
+        onEdit(comment, editedContent);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+
+  }
   return (
     <div className='flex p-4 border-b dark:border-gray-600 text-sm'>
       <div className='flex-shrink-0 mr-3'>
