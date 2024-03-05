@@ -25,7 +25,7 @@ export default function CommentSection({ postId }) {
       const res = await fetch('/api/comment/create', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json',          
         },
         body: JSON.stringify({
           content: comment,
@@ -33,6 +33,7 @@ export default function CommentSection({ postId }) {
           userId: currentUser._id,
         }),
       });
+      console.log(res);
       const data = await res.json();
       console.log(data);
       if (res.ok) {
