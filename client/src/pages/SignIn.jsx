@@ -48,9 +48,9 @@ export default function SignIn() {
         <div className='flex-1'>
           <Link to='/' className='font-bold dark:text-white text-4xl'>
             <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-             Abinav&apos;s
+             Tech Trends
             </span>
-            Blog
+            - An Innovative Blog Platform 
           </Link>
           <p className='text-sm mt-5'>
             You can sign in with your email and password

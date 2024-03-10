@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <div>
     <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto '>
-      <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to my Blog</h1>
+      <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to Tech Trends- An Innovative Blog Platform</h1>
       <p className='text-gray-500 text-xs sm:text-sm'>
-        Here you&apos;ll find a variety of articles  on topics such as
-        web development, software engineering, AI,Cyber Security.
+        Here you&apos;ll find a variety of blogs  on topics such as
+        web development, software engineering, AI,Cyber Security etc...
       </p>
       <Link
         to='/search'
