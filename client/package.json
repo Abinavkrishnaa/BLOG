@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.1.0",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "caniuse-lite": "^1.0.30001640",
     "firebase": "^10.7.2",
     "flowbite-react": "^0.7.2",
     "moment": "^2.30.1",
